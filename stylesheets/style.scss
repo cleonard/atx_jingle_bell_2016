@@ -1,0 +1,327 @@
+---
+---
+@charset "utf-8";
+
+@import 'bourbon';
+@import 'neat';
+
+$green: #2d9d2f;
+$red: #e2231a;
+$desktop: new-breakpoint(min-width 800px 12);
+
+/* Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Base styles */
+
+body {
+  background: $green;
+  color: #333;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 100%;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.container {
+  @include outer-container;
+  padding: 0 1.5em;
+}
+
+p {margin: 1em 0;}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+strong {font-weight: bold;}
+em {font-style: italic;}
+
+main a {
+  &:link, &:visited {
+    color: darken($red, 15%);
+  }
+  &:hover, &:active {
+    color: $red;
+  }
+}
+
+/* Header */
+
+header {
+  #logo a {
+    display: block;
+    margin: 0 auto;
+    padding: 1em 0;
+    width: 200px;
+  }
+}
+
+nav {
+  background: $red;
+  ul {text-align: center;}
+  li {
+    display: inline-block;
+  }
+  a {
+    @include transition(all 0.5s ease-in-out);
+    color: white;
+    display: inline-block;
+    font-size: .875em;
+    padding: 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover, &:active {
+      background: darken($red, 10%);
+    }
+  }
+}
+
+span.fa {
+  display: inline-block;
+  font-size: 1.25em;
+  line-height: 1.2;
+  margin-right: .25em;
+}
+
+#photos {
+  padding: .5em 0;
+  text-align: center;
+  figure {
+    border: 3px solid white;
+    display: inline-block;
+    margin-bottom: .5em;
+    margin-top: .5em;
+    width: 48%;
+    &:nth-child(even) {
+      margin-left: 2%;
+    }
+    @include media($desktop) {
+      margin-left: 2%;
+      width: 23%;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+/* Content */
+
+#content {
+  background: white;
+  padding-bottom: 2em;
+}
+
+#title {
+  padding: 1.5em 0 1em;
+  h1 {
+    font-size: 2em;
+  }
+}
+
+h2 {
+  font-size: 1.35em;
+  margin: 1em 0;
+}
+
+main {
+  @include media($desktop) {
+    @include span-columns(8);
+  }
+}
+
+aside {
+  @include media($desktop) {
+    @include span-columns(4);
+    @include omega();
+  }  
+}
+
+aside ul {
+  li {
+    margin: 1em 0;
+    a {
+      @include transition(all 0.5s ease-in-out);
+      background: $red;
+      color: white;
+      display: block;
+      padding: 1em;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      &:hover, &:active {
+        background: darken($red, 10%);
+      }
+    }
+  }
+}
+
+body.event main figure {
+  max-width: 400px;
+}
+
+footer {
+  color: white;
+  padding-bottom: 3em;
+  section {
+    margin: 1em 0;
+    @include media($desktop) {
+      @include span-columns(4);
+    }
+  }
+  a {
+    color: #ffc;
+  }
+}
+
+ul.sponsors {
+  margin: 1em 0;
+  text-align: center;
+  li {
+    display: inline-block;
+    padding: .5em;
+  }
+}
+
+.beta li {
+  width: 48%;
+}
+
+.gamma li {
+  width: 48%;
+}
+
+.delta li {
+  width: 25%;
+}
+
+li.wf {
+  width: 15%;
+}
+
+/* Add to calendar */
+
+/**
+ * AddToCalendar Base CSS
+ * http://addtocalendar.com
+ */
+
+/* Base */
+
+.addtocalendar var{
+  display: none;
+}
+
+.addtocalendar {
+  position: relative;
+  display: inline-block;
+  background: transparent!important;
+}
+
+.atcb-link {
+  @include transition(all 0.5s ease-in-out);
+  display: block;
+  outline: none!important;
+  cursor: pointer;
+  background: $red;
+  color: white;
+  padding: .75em;
+  &:hover, &:active {
+    background: darken($red, 15%);
+    color: white;
+  }
+}
+
+.atcb-link:focus~ul,
+.atcb-link:active~ul,
+.atcb-list:hover{
+  visibility:visible;
+}
+
+.atcb-list {
+  border: 1px solid #ccc;
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 170px;
+  z-index: 900;
+  padding: 0;
+}
+
+.atcb-list,
+.atcb-item
+{
+  list-style: none;
+  margin: 0;
+  background: #fff;
+}
+
+.atcb-item {
+  float: none;
+  text-align: left;
+  padding: .75em;
+}
+
+.atcb-item-link
+{
+  text-decoration: none;
+  outline: none;
+  display: block;
+}
+
+.atcb-item.hover,
+.atcb-item:hover {
+  position: relative;
+  z-index: 900;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+}
+
+
+

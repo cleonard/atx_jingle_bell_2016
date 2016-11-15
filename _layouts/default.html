@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body class="{{ page.class }}">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=206156002755506";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    {% include header.html %}
+    
+    <div id="content">
+      <div class="container">
+        <div id="title">
+          <h1>{{ page.title }}</h1>
+        </div>
+        <main>
+          {{ content }}
+        </main>
+        <aside>
+          <ul>
+            <li><a href="http://austinjinglebell5k.com/">Register</a></li>
+            <li><a href="https://secure2.convio.net/madd/site/Donation2;jsessionid=F61D943A61C5484216BB761A6887E93B.app260b?df_id=3280&3280.donation=form1&set.custom.MADD%20Office=4800">Donate</a></li>
+            <li><a href="/volunteer">Volunteer</a></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+
+    {% include footer.html %}
+    
+    {% if page.class == 'event' %}
+    <script type="text/javascript">(function () {
+      if (window.addtocalendar)if(typeof window.addtocalendar.start == "function")return;
+      if (window.ifaddtocalendar == undefined) { window.ifaddtocalendar = 1;
+        var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+        s.type = 'text/javascript';s.charset = 'UTF-8';s.async = true;
+        s.src = ('https:' == window.location.protocol ? 'https' : 'http')+'://addtocalendar.com/atc/1.5/atc.min.js';
+        var h = d[g]('body')[0];h.appendChild(s); }})();
+    </script>
+    {% endif %}
+  </body>
+
+</html>

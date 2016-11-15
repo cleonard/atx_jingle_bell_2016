@@ -1,0 +1,16 @@
+<head>
+  <title>{% if page.class == 'home' %}{{ site.title }}{% else %}{{ page.title }} &bull; {{ site.title }}{% endif %}</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:url"           content="{{ site.url }}{{ page.url }}" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="{{ page.title }}" />
+	<meta property="og:description"   content="{{ site.description }}" />
+	<meta property="og:image"         content="austin_jingle_bell_5k_og.png" />
+  </head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="{{ "/stylesheets/style.css" | prepend: site.baseurl }}">
+  <script src="https://use.fontawesome.com/4530c2363a.js"></script>
+</head>

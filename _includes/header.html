@@ -1,0 +1,28 @@
+<header>
+  <div id="logo">
+    <div class="container">    
+      <a href="/">
+        <img src="/images/atx_jingle_bell_5k_2016.svg" alt="Austin Jingle Bell 5K 0 2016">
+      </a>
+    </div>
+  </div>
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/event_details">Event Details</a></li>
+        <li><a href="/sponsors">Sponsors </a></li>
+        <li><a href="/about">About MADD</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="https://www.facebook.com/austinjinglebell5k/"><span class="fa fa-facebook"></span> Facebook</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div id="photos">
+    <div class="container">
+      {% for image in page.images %}
+        <figure><img src="{{ image.path }}" alt="{{ image.title}}"/></figure>
+      {% endfor %}
+    </div>
+  </div>
+</header>
