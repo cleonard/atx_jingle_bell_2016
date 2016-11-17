@@ -23,3 +23,4 @@ url: "http://austinjinglebell5k.com" # the base hostname & protocol for your sit
 markdown: kramdown
 
 gems: [bourbon, neat, jekyll-redirect-from]
+exclude: ['Gemfile', 'Gemfile.lock']
