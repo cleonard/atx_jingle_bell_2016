@@ -17,7 +17,7 @@
 title: Austin Jingle Bell 5K &ndash; December 11, 2016
 description: The Austin Jingle Bell 5k is a great family-oriented run/walk that takes place each December at The Domain in Austin to benefit MADD (Mothers Against Drunk Driving). Each participant is fastened with their own set of bells to give the event it’s signature ‘jingle bell’ atmosphere, not to mention Santa will be in attendance! Bring the whole family and join us in kicking off the month of December with a little Christmas spirit for an important cause.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://austinjinglebell5k.com" # the base hostname & protocol for your site
+url: "http://austinjinglebell.com" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
