@@ -217,8 +217,11 @@ ul.sponsors {
     padding: .5em;
     vertical-align: middle; }
 
-.beta li, .gamma li, .delta li {
+.beta li, .gamma li {
   width: 48%; }
+
+.delta li {
+  width: 32%; }
 
 .epsilon li {
   width: 25%; }
