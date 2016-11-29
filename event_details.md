@@ -35,6 +35,10 @@ Location: The Domain 11410 Century Oaks Terrace, Austin, TX 78758
   </var>
 </span>
 
+## Course Map
+
+{% include course_map.html %}
+
 ## Packet Pick-Up Details
 
 Location: Ready to Run  

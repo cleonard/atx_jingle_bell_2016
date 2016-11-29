@@ -170,6 +170,11 @@ h2 {
   margin: 1em 0;
 }
 
+.sponsors h2 {
+  margin: 1.5em 0 1em;
+  text-align: center;
+}
+
 main {
   @include media($desktop) {
     @include span-columns(8);
@@ -226,23 +231,24 @@ ul.sponsors {
   li {
     display: inline-block;
     padding: .5em;
+    vertical-align: middle;
   }
 }
 
-.beta li {
+.beta li, .gamma li, .delta li {
   width: 48%;
 }
 
-.gamma li {
-  width: 48%;
-}
-
-.delta li {
+.epsilon li {
   width: 25%;
 }
 
-li.wf {
+.zeta li {
   width: 15%;
+}
+
+li.wf, li.sc {
+  width: 12%;
 }
 
 /* Add to calendar */
