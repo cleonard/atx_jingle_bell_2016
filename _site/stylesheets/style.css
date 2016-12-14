@@ -298,3 +298,25 @@ li.wf, li.sc {
   cursor: pointer;
   text-decoration: none;
   outline: none; }
+
+#post_race {
+  margin: 0;
+  padding-bottom: 1.5em; }
+  #post_race ul {
+    text-align: center; }
+  #post_race li {
+    display: inline-block;
+    margin: 0 .5em; }
+  #post_race a {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    background: #e2231a;
+    color: white;
+    display: block;
+    padding: 1em 1.5em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase; }
+    #post_race a:hover, #post_race a:active {
+      background: #b41c15; }
